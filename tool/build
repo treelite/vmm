@@ -1,0 +1,19 @@
+#! /bin/bash
+
+DIR="output"
+MAIN_CMD="${DIR}/bin/vmm"
+
+rm -rf ${DIR}
+
+babel lib -d output/lib
+babel bin -d output/bin
+
+cp package.json ${DIR}/package.json
+
+if [ ! -e "${MAIN_CMD}" ]; then
+    touch ${MAIN_CMD}
+    chmod a+x ${MAIN_CMD}
+fi
+
+echo '#! /usr/bin/env node' > ${MAIN_CMD}
+cat ${MAIN_CMD}.js >> ${MAIN_CMD}
