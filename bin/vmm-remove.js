@@ -1,5 +1,5 @@
 /**
- * @file Main command
+ * @file Remove package
  * @author treelite(c.xinle@gmail.com)
  */
 
