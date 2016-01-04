@@ -9,6 +9,8 @@ babel lib -d output/lib
 babel bin -d output/bin
 
 cp package.json ${DIR}/package.json
+cp LICENSE ${DIR}/
+cp README.md ${DIR}/
 
 if [ ! -e "${MAIN_CMD}" ]; then
     touch ${MAIN_CMD}
