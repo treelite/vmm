@@ -7,15 +7,12 @@
 
 import * as pkg from '../lib/pkg';
 
-let url = process.argv[2];
-
-if (!url) {
-    console.log('please input package url');
-    process.exit(1);
-}
-
 console.log('hold on, installing ...');
-pkg.install(url).then(
+
+let url = process.argv[2];
+let cmds = url ? [pkg.install(url)] : pkg.init();
+
+cmds.map(action => action.then(
     name => console.log(`install ${name} success`),
     error => console.log(`install fail, ${error}`)
-);
+));
