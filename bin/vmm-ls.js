@@ -3,9 +3,9 @@
  * @author treelite(c.xinle@gmail.com)
  */
 
-import * as meta from '../lib/meta';
+import * as pkg from '../lib/pkg';
 
-let packages = meta.get();
+let packages = pkg.get();
 
 if (!packages.length) {
     console.log('no packages, use `vmm import <package>` to import packages');
