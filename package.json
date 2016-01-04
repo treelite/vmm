@@ -1,8 +1,7 @@
 {
   "name": "vmm",
   "version": "0.1.0",
-  "description": "Package manager for VIM",
-  "main": "index.js",
+  "description": "Simple Plugin Manager for VIM",
   "bin": "./bin/vmm",
   "scripts": {
     "prepublish": "exit 1",
