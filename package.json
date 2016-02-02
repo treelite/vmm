@@ -1,6 +1,6 @@
 {
   "name": "vmm",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "description": "Simple Plugin Manager for VIM",
   "bin": "./bin/vmm",
   "scripts": {
